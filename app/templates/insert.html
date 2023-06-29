@@ -1,0 +1,16 @@
+<!-- insert.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert Data</title>
+</head>
+<body>
+    <h1>Insert Data</h1>
+    <form action="{% url 'insert_data' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="csv_file" required><br><br>
+        <input type="submit" value="Insert">
+    </form>
+</body>
+</html>
